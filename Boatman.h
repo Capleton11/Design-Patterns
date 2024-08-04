@@ -3,7 +3,7 @@
 
 #include "Soldiers.h"
 
-class BoatMan : public Soldiers
+class Boatman : public Soldiers
 {
 private:
     void prepare();
