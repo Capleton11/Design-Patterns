@@ -10,10 +10,6 @@ private:
     void execute();
     void retreat();
     void rest();
-
-public:
-    void engage();
-    void disengage();
 };
 
 #endif
