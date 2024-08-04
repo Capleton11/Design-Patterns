@@ -22,8 +22,8 @@ private:
     virtual void rest() = 0;
 
 public:
-    virtual void engage() = 0;
-    virtual void disengage() = 0;
+    virtual void engage();
+    virtual void disengage();
 };
 
 #endif
