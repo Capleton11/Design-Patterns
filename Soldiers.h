@@ -24,6 +24,7 @@ private:
 public:
     virtual void engage();
     virtual void disengage();
+    Soldiers* clonis();
 };
 
 #endif
