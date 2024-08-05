@@ -10,6 +10,7 @@ private:
     void execute();
     void retreat();
     void rest();
+    
 };
 
 #endif
