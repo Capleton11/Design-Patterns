@@ -10,6 +10,10 @@ private:
     void execute();
     void retreat();
     void rest();
+
+public:
+    Shieldbearer(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    void displayState();
 };
 
 #endif
