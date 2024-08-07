@@ -27,6 +27,11 @@ public:
     virtual void engage();
     virtual void disengage();
     Soldiers* clonis();
+     virtual int getHealthPerSoldier();
+     virtual int getDamagePerSoldier();
+     virtual int getDefencePerSoldier();
+     virtual int getAmountOfSoldiersPerUnit();
+     virtual std::string getUnitName();
 };
 
 #endif

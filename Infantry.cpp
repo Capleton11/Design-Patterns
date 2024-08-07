@@ -1,5 +1,10 @@
 #include "Infantry.h"
 
+Infantry::Infantry() {
+    
+}
+
+
 void Infantry::prepare(){
     // prepare prepare ...
 }
