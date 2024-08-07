@@ -17,7 +17,3 @@ void Soldiers::disengage(){
     retreat();
     rest();
 }
-
-void Soldiers::displayState(){
-    std::cout << "what!!!";
-}
