@@ -1,7 +1,8 @@
 #include "ShieldBearer.h"
 
 void Shieldbearer::prepare(){
-    // prepare prepare ...
+ 
+
 }
 
 void Shieldbearer::rest(){

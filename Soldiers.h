@@ -16,6 +16,8 @@ private:
     int amountOfSoldiersPerUnit;
     std::string unitName;
 
+    friend int clonis();
+
     virtual void prepare() = 0;
     virtual void execute() = 0;
     virtual void retreat() = 0;

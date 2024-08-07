@@ -6,6 +6,7 @@
 class Boatman : public Soldiers
 {
 private:
+    
     void prepare();
     void execute();
     void retreat();
