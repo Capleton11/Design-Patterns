@@ -10,6 +10,10 @@ private:
     void execute();
     void retreat();
     void rest();
+public:
+Shieldbearer();
+Shieldbearer(const Shieldbearer* other);
+Soldiers* clonis();
 };
 
 #endif

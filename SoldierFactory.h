@@ -10,7 +10,7 @@ class SoldierFactory{
     virtual int calculateTotalHealthPerUnit( Soldiers* soldiers) ;
     virtual int calculateToatalDamagePerUnit( Soldiers* soldiers);
     virtual int calculateTotalDefensePerUnit(Soldiers* soldiers);
-
+   virtual ~SoldierFactory();
  private:
     Soldiers* soldiers;
    

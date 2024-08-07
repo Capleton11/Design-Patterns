@@ -10,7 +10,10 @@ private:
     void execute();
     void retreat();
     void rest();
-    
+public:
+Infantry();
+Infantry(const Infantry &other) ; 
+Soldiers* clonis();
 };
 
 #endif

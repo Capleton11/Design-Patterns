@@ -11,6 +11,10 @@ private:
     void execute();
     void retreat();
     void rest();
+public:
+    Soldiers* clonis();
+    Boatman();
+    Boatman(const Boatman &other);
 };
 
 #endif
