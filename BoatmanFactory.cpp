@@ -2,8 +2,10 @@
 #include "SoldierFactory.h"
 #include "BoatmanFactory.h"
 #include "Boatman.h"
+#include "Soldiers.h"
 using namespace std;
 
 Soldiers* BoatmanFactory::createUnit() {
-    return new Boatman();
+    Soldiers* boatMan= new Boatman();
+    return boatMan;
 }

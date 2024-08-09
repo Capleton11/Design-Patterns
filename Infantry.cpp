@@ -1,5 +1,5 @@
 #include "Infantry.h"
-#include "Soldiers.h"
+
 
 Infantry::Infantry() {
     healthPerSoldier = 100;
@@ -36,3 +36,5 @@ void Infantry::retreat(){
 void Infantry::execute(){
     // execute execute ...
 }
+
+Infantry::~Infantry() {}

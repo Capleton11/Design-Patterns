@@ -25,3 +25,5 @@ int Soldiers::getAmountOfSoldiersPerUnit()  {
 std::string Soldiers::getUnitName()  { 
 return unitName; 
 }
+
+Soldiers::~Soldiers(){};

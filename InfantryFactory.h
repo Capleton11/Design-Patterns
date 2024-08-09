@@ -2,6 +2,7 @@
 #define INFANTRYFACTORY_H
 
 #include <iostream>
+#include "Soldiers.h"
 #include "SoldierFactory.h"
 using namespace std;
 class InfantryFactory : public SoldierFactory{

@@ -5,14 +5,16 @@
 #include "Soldiers.h"
 using namespace std;
 class SoldierFactory{
- protected:
-    virtual Soldiers* createUnit() =0;
-    virtual int calculateTotalHealthPerUnit( Soldiers* soldiers) ;
-    virtual int calculateToatalDamagePerUnit( Soldiers* soldiers);
-    virtual int calculateTotalDefensePerUnit(Soldiers* soldiers);
-   virtual ~SoldierFactory();
+ 
  private:
     Soldiers* soldiers;
+
+public:
+virtual Soldiers* createUnit() =0;
+virtual int calculateTotalHealthPerUnit( Soldiers* soldiers) ;
+virtual int calculateTotalDamagePerUnit( Soldiers* soldiers);
+virtual int calculateTotalDefencePerUnit(Soldiers* soldiers);
+virtual ~SoldierFactory();
    
 
 };

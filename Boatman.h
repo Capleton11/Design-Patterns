@@ -3,8 +3,7 @@
 
 #include "Soldiers.h"
 
-class Boatman : public Soldiers
-{
+class Boatman : public Soldiers{
 private:
     
     void prepare();
@@ -12,7 +11,7 @@ private:
     void retreat();
     void rest();
 public:
-    Soldiers* clonis();
+    virtual Soldiers* clonis();
     Boatman();
     Boatman(const Boatman &other);
 };

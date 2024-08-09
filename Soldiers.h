@@ -6,10 +6,11 @@
 #include <vector>
 #include <list>
 #include <map>
-#include "ShieldBearer.h"
-#include "BoatMan.h"
-#include "Infantry.h"
 
+
+class Infantry;    // Forward declaration
+class Shieldbearer; // Forward declaration
+class Boatman;
 
 class Soldiers
 {
@@ -29,7 +30,7 @@ private:
 public:
     virtual void engage();
     virtual void disengage();
-    Soldiers* clonis();
+     virtual Soldiers* clonis()=0;
      virtual int getHealthPerSoldier();
      virtual int getDamagePerSoldier();
      virtual int getDefencePerSoldier();

@@ -1,10 +1,8 @@
 #ifndef INFANTRY_H
 #define INFANTRY_H
 
-#include "Soldiers.h"
-
-class Infantry : public Soldiers
-{
+#include "Soldiers.h" 
+class Infantry : public Soldiers{
 private:
     void prepare();
     void execute();
@@ -13,7 +11,8 @@ private:
 public:
 Infantry();
 Infantry(const Infantry &other) ; 
-Soldiers* clonis();
+virtual Soldiers* clonis();
+~Infantry();
 };
 
 #endif

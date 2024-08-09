@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "SoldierFactory.h"
+#include "Soldiers.h"
 using namespace std;
 class ShieldBearerFactory : public SoldierFactory{
  public:

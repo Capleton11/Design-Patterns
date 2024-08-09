@@ -3,8 +3,7 @@
 
 #include "Soldiers.h"
 
-class Shieldbearer : public Soldiers
-{
+class Shieldbearer : public Soldiers{
 private:
     void prepare();
     void execute();
@@ -12,8 +11,8 @@ private:
     void rest();
 public:
 Shieldbearer();
-Shieldbearer(const Shieldbearer* other);
-Soldiers* clonis();
+Shieldbearer(const Shieldbearer &other);
+virtual Soldiers* clonis();
 };
 
 #endif

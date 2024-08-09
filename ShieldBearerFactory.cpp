@@ -2,8 +2,10 @@
 #include "SoldierFactory.h"
 #include "ShieldBearerFactory.h"
 #include "ShieldBearer.h"
+#include "Soldiers.h"
 using namespace std;
 
 Soldiers* ShieldBearerFactory::createUnit() {
-    return new Shieldbearer();
+    Soldiers* shieldguy = new Shieldbearer();
+    return shieldguy;
 }
