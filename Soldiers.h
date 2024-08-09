@@ -7,6 +7,7 @@
 #include <list>
 #include <map>
 
+#include "Memento.h"
 class Soldiers
 {
 private:
@@ -25,6 +26,8 @@ public:
     Soldiers(int health, int damage, int defence, int soldiersNO, std::string unitName);
     virtual void engage();
     virtual void disengage();
+    Memento* militusMemento();
+    void vivificaMemento(Memento*);
 };
 
 #endif
