@@ -17,6 +17,7 @@ public:
     friend Soldiers;
     CareTaker* ct;
     Memento(int healthPerSoldier, int damagePerSoldier, int defencePerSoldier, int amountOfSoldiersPerUnit, std::string unitName);
+    ~Memento();
 };
 
 #endif

@@ -6,7 +6,11 @@ Memento::Memento(int healthPerSoldier, int damagePerSoldier, int defencePerSoldi
     this->defencePerSoldier = defencePerSoldier;
     this->amountOfSoldiersPerUnit = amountOfSoldiersPerUnit;
     this->unitName = unitName;
-
+    ct = new CareTaker();
     // this->ct->memento.push_back(this);
+}
+
+Memento::~Memento(){
+    delete ct;
 }
 

@@ -2,14 +2,14 @@
 #define CARETAKER_H
 
 #include <list>
+#include <iostream>
 
 class Memento;
 class CareTaker
 {
-    std::list<Memento*> memento;
-
 public:
-    friend Memento;
+    std::list<Memento *> memento;
+    CareTaker();
 };
 
 #endif
