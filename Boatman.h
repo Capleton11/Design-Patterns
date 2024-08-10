@@ -12,7 +12,10 @@ private:
     void rest();
 
 public:
-    Boatman(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    // Boatman(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    virtual Soldiers* clonis();
+    Boatman();
+    Boatman(const Boatman &other);
 };
 
 #endif

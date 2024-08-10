@@ -12,7 +12,11 @@ private:
     void rest();
 
 public:
-    Infantry(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    // Infantry(int health, int damage, int defence, int soldiersNO, std::string unitName);
+
+    Infantry();
+    Infantry(const Infantry &other);
+    virtual Soldiers *clonis();
 };
 
 #endif

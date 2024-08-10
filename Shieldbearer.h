@@ -12,7 +12,10 @@ private:
     void rest();
 
 public:
-    Shieldbearer(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    // Shieldbearer(int health, int damage, int defence, int soldiersNO, std::string unitName);
+    Shieldbearer();
+    Shieldbearer(const Shieldbearer &other);
+    virtual Soldiers *clonis();
 };
 
 #endif
