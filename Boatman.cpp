@@ -18,10 +18,6 @@ Boatman::Boatman(const Boatman &other) {
     unitName = other.unitName;
 }
 
-Soldiers* Boatman::clonis(){
-    return new Boatman(*this);
-}
-
 void Boatman::prepare(){
     std::cout << "Execution: Boatman -> Prepare \n " << std::endl;
 }
