@@ -34,6 +34,10 @@ void Soldiers::vivificaMemento(Memento* meme){
     unitName = meme->unitName;
 }
 
+void Soldiers::setHealth( int heath){
+    healthPerSoldier = heath;
+}
+
 int Soldiers::getHealthPerSoldier()  { 
     return healthPerSoldier; 
 }
@@ -49,3 +53,4 @@ int Soldiers::getAmountOfSoldiersPerUnit()  {
 std::string Soldiers::getUnitName()  { 
 return unitName; 
 }
+

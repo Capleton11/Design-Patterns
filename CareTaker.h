@@ -6,11 +6,14 @@
 #include "Memento.h"
 class CareTaker
 {
+private:
+        std::list<Memento *> memento;
 public:
-    std::list<Memento *> memento;
+
     CareTaker();
     void save(Memento*);
     Memento* restore();
+    ~CareTaker();
 };
 
 #endif

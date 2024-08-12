@@ -42,6 +42,7 @@ public:
     virtual int getDefencePerSoldier();
     virtual int getAmountOfSoldiersPerUnit();
     virtual std::string getUnitName();
+    void setHealth(int health);
 };
 
 #endif

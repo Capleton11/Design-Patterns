@@ -4,32 +4,40 @@
 #include "CareTaker.h"
 
 void displayUnitStats(SoldierFactory* factory) {
+   // A Unit is created here and cloned
     Soldiers* unit = factory->createUnit();
     Soldiers* clonedUnit = unit->clonis();
+    
+    // The careTaker Takes a snapshot /memento of the unit before it engages
+    CareTaker* careTaker = new CareTaker();
+    Memento* memento = unit->militusMemento();
+    careTaker->save(memento);
 
+    // The Unit here advances by engaging
     unit->engage();
+    std::cout << "Original Unit: " << unit->getUnitName() << std::endl;
+    std::cout << "Total Damage: " << factory->calculateTotalDamagePerUnit(unit) << std::endl;
+    unit->setHealth(50);
+    std::cout << "Total Health: " << factory->calculateTotalHealthPerUnit(unit) << std::endl;
+    std::cout << "Total Defence: " << factory->calculateTotalDefencePerUnit(unit) << std::endl;
     unit->disengage();
 
-    // Memento* mem = unit->militusMemento();
-    // mem->ct->save(mem);
-    CareTaker* one = new CareTaker();
-    one->save(unit->militusMemento());
-    unit->vivificaMemento(one->restore());
-
-    std::cout << "Original Unit: " << unit->getUnitName() << std::endl;
+    // After disengaging, the snapshot of the Unit before it engaged is restored and their health is recalculated 
+    Memento* restoredMemento = careTaker->restore();
+    unit->vivificaMemento(restoredMemento); 
     std::cout << "Total Health: " << factory->calculateTotalHealthPerUnit(unit) << std::endl;
-    std::cout << "Total Damage: " << factory->calculateTotalDamagePerUnit(unit) << std::endl;
-    std::cout << "Total Defence: " << factory->calculateTotalDefencePerUnit(unit) << std::endl;
-
+    
+    // The information of the Cloned Unit is displayed here to make sure the cloning worked properly
     std::cout << "Cloned Unit: " << clonedUnit->getUnitName() << std::endl;
     std::cout << "Total Health: " << factory->calculateTotalHealthPerUnit(clonedUnit) << std::endl;
     std::cout << "Total Damage: " << factory->calculateTotalDamagePerUnit(clonedUnit) << std::endl;
     std::cout << "Total Defence: " << factory->calculateTotalDefencePerUnit(clonedUnit) << std::endl;
 
+    // Memory is deallocated for the unit, cloned unit, and CareTaker
     delete unit;
+    delete memento;
     delete clonedUnit;
-   delete one;
-   one = nullptr;
+    delete careTaker;
 }
 
 int main()
