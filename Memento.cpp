@@ -11,6 +11,6 @@ Memento::Memento(int healthPerSoldier, int damagePerSoldier, int defencePerSoldi
 }
 
 Memento::~Memento(){
-    delete ct;
+  
 }
 
