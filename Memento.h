@@ -3,7 +3,6 @@
 
 #include <iostream>
 
-#include "CareTaker.h"
 class Soldiers;
 class Memento
 {
@@ -15,7 +14,6 @@ class Memento
 
 public:
     friend Soldiers;
-    CareTaker* ct;
     Memento(int healthPerSoldier, int damagePerSoldier, int defencePerSoldier, int amountOfSoldiersPerUnit, std::string unitName);
     ~Memento();
 };

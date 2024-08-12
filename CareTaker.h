@@ -3,13 +3,14 @@
 
 #include <list>
 #include <iostream>
-
-class Memento;
+#include "Memento.h"
 class CareTaker
 {
 public:
     std::list<Memento *> memento;
     CareTaker();
+    void save(Memento*);
+    Memento* restore();
 };
 
 #endif

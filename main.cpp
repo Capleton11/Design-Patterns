@@ -1,6 +1,7 @@
 #include "InfantryFactory.h"
 #include "BoatmanFactory.h"
 #include "ShieldbearerFactory.h"
+#include "CareTaker.h"
 
 void displayUnitStats(SoldierFactory* factory) {
     Soldiers* unit = factory->createUnit();
@@ -9,9 +10,11 @@ void displayUnitStats(SoldierFactory* factory) {
     unit->engage();
     unit->disengage();
 
-    Memento* mem = unit->militusMemento();
-    mem->ct->memento.push_front(mem);
-    unit->vivificaMemento(mem->ct->memento.front());
+    // Memento* mem = unit->militusMemento();
+    // mem->ct->save(mem);
+    CareTaker* one = new CareTaker();
+    one->save(unit->militusMemento());
+    unit->vivificaMemento(one->restore());
 
     std::cout << "Original Unit: " << unit->getUnitName() << std::endl;
     std::cout << "Total Health: " << factory->calculateTotalHealthPerUnit(unit) << std::endl;
@@ -25,7 +28,8 @@ void displayUnitStats(SoldierFactory* factory) {
 
     delete unit;
     delete clonedUnit;
-    delete mem;
+   delete one;
+   one = nullptr;
 }
 
 int main()
